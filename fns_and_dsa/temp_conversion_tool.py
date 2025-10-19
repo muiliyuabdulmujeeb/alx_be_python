@@ -13,6 +13,8 @@ def convert_to_fahrenheit(celcius: float):
 to_convert= float(input("Enter the temperature to convert: "))
 unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").lower()
 
+if not isinstance(to_convert, float):
+    print("Invalid temperature. Please enter a numeric value.")
 match unit:
     case "c":
         print(f"Converting {to_convert} from Celcius to Fahrenheit")
