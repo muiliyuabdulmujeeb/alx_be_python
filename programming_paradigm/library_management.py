@@ -6,6 +6,12 @@ class Book:
 
     def __str__(self):
         return f"{self.title} by {self.author}"
+    
+    def check_out(self):
+        self._is_checked_out = True
+    
+    def return_book(self):
+        self._is_checked_out = False
 
 class Library:
     def __init__(self):
