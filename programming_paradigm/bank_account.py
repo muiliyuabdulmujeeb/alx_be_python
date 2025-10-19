@@ -15,11 +15,10 @@ class BankAccount:
             print("You cannot withraw a negative amount")
             return False
         elif amount > self.account_balance:
-            print("Insufficient funds.")
             return False
         else:
             self.account_balance = self.account_balance - amount
             return True
         
     def display_balance(self):
-        return f"Current Balance: {self.account_balance}"
+        print(f"Current Balance: {self.account_balance}")

@@ -5,9 +5,9 @@ def safe_divide(numerator, denominator):
     except ValueError:
         raise print("Error: Please enter numeric values only.")
     
-
-    try:
-        result = numerator/denominator
-    except ZeroDivisionError:
-        raise print("Error: Cannot divide by zero.")
-    return f"The result of the division is {result}"
+    if numerator and denominator:
+        try:
+            result = numerator/denominator
+        except ZeroDivisionError:
+            raise print("Error: Cannot divide by zero.")
+        print(f"The result of the division is {result}")
