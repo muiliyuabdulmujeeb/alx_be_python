@@ -14,7 +14,7 @@ class BankAccount:
         if amount < 0:
             print("You cannot withraw a negative amount")
             return False
-        elif amount < self.account_balance:
+        elif amount > self.account_balance:
             print("Insufficient funds.")
             return False
         else:
